@@ -1,0 +1,229 @@
+/* =========================================================
+   Frontend Projects Page
+========================================================= */
+
+.projects-page {
+  min-height: 100vh;
+  background: var(--color-bg-primary);
+  /* padding: 2rem; */
+  padding-top: 1rem;
+}
+
+.breadcrumb-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.breadcrumb-link:hover {
+  color: var(--color-accent-dark);
+}
+
+/* =========================================================
+   Page Header
+========================================================= */
+
+/* .projects-page-header {
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+} */
+
+/* =========================================================
+   Frontend Projects Grid
+========================================================= */
+
+.frontend-projects-list {
+  padding-bottom: 7rem;
+}
+
+.frontend-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-xl);
+}
+
+/* =========================================================
+   Compact Project Card
+========================================================= */
+
+.frontend-project-card {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-secondary);
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.frontend-project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px rgba(24, 24, 27, 0.07);
+}
+
+/* =========================================================
+   Compact Project Image
+========================================================= */
+
+.frontend-project-image {
+  width: 100%;
+
+  /* Much shorter than the previous 16 / 9 area */
+  aspect-ratio: 16 / 7;
+
+  overflow: hidden;
+  background: var(--color-bg-tertiary);
+}
+
+.frontend-project-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform var(--transition-smooth);
+}
+
+.frontend-project-card:hover .frontend-project-image img {
+  transform: scale(1.025);
+}
+
+/* =========================================================
+   Project Content
+========================================================= */
+
+.frontend-project-content {
+  padding: 1.35rem 1.5rem 1.4rem;
+}
+
+/* Category */
+
+.frontend-project-category {
+  display: block;
+
+  margin-bottom: 0.5rem;
+
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: var(--color-text-muted);
+}
+
+/* Title */
+
+.frontend-project-content h2 {
+  margin-bottom: 0.5rem;
+
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+
+  color: var(--color-text-primary);
+}
+
+/* Description */
+
+.frontend-project-content p {
+  margin-bottom: 1rem;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   Technologies
+========================================================= */
+
+.frontend-project-tech {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.4rem;
+
+  margin-bottom: 1.15rem;
+}
+
+.frontend-project-tech span {
+  padding: 0.28rem 0.55rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+
+  font-size: 0.68rem;
+  line-height: 1;
+
+  color: var(--color-text-secondary);
+}
+
+/* =========================================================
+   Project Actions
+========================================================= */
+
+.frontend-project-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 1.15rem;
+}
+
+.frontend-project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  font-size: 0.82rem;
+  font-weight: 600;
+
+  color: var(--color-text-primary);
+
+  text-decoration: none;
+
+  transition: color var(--transition-fast);
+}
+
+.frontend-project-link:hover {
+  color: var(--color-accent);
+}
+
+.frontend-project-link.secondary {
+  color: var(--color-text-muted);
+}
+
+/* =========================================================
+   Responsive
+========================================================= */
+
+@media (max-width: 900px) {
+  .frontend-projects-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-page-header {
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+  }
+
+  .frontend-projects-list {
+    padding-bottom: 5rem;
+  }
+
+  .frontend-project-content {
+    padding: 1.25rem;
+  }
+
+  .frontend-project-image {
+    aspect-ratio: 16 / 8;
+  }
+}

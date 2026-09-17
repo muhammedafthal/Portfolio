@@ -1,0 +1,32 @@
+.project-details-page {
+  min-height: 100vh;
+}
+
+.project-not-found-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.not-found-card {
+  max-width: 500px;
+  margin: var(--space-4xl) auto;
+  text-align: center;
+  padding: var(--space-2xl);
+}
+
+.not-found-card h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.not-found-card p {
+  margin-bottom: var(--space-xl);
+  color: var(--color-text-secondary);
+}
+
+.not-found-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+}

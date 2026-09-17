@@ -1,0 +1,82 @@
+.project-hero-section {
+  padding-top: calc(var(--space-4xl) + 1.5rem);
+  padding-bottom: var(--space-2xl);
+  background: var(--gradient-hero-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.project-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-lg);
+  font-size: 0.9rem;
+}
+
+.breadcrumb-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.breadcrumb-link:hover {
+  color: var(--color-accent-dark);
+}
+
+.breadcrumb-separator {
+  color: var(--color-text-light);
+}
+
+.breadcrumb-current {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.project-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 840px;
+}
+
+.project-hero-category {
+  margin-bottom: var(--space-sm);
+}
+
+.project-hero-title {
+  margin-bottom: var(--space-xs);
+}
+
+.project-hero-tagline {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-xl);
+}
+
+.project-hero-tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-2xl);
+}
+
+.hero-tech-badge {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  box-shadow: var(--shadow-sm);
+}
+
+.project-hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}

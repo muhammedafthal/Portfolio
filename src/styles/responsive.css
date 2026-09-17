@@ -1,0 +1,26 @@
+/* Responsive Breakpoint Utilities */
+
+@media (max-width: 1024px) {
+  :root {
+    --space-3xl: 3.5rem;
+    --space-4xl: 4.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --space-3xl: 2.75rem;
+    --space-4xl: 3.5rem;
+  }
+
+  .section-padding {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .container,
+  .container-narrow {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
+}

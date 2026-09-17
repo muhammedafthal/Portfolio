@@ -1,0 +1,57 @@
+export const experiences = [
+  {
+    id: "current-internship",
+    role: "Full-Stack Developer Intern",
+    company: "BrandFolks",
+    type: "Internship",
+    location: "On-site | Kerala, India",
+    period: "Present",
+    isCurrent: true,
+    description:
+      "Developing scalable full-stack web applications, implementing secure RESTful APIs in Node.js/Express, and building responsive React components.",
+    responsibilities: [
+      "Designed and implemented RESTful API endpoints for backend authentication, authorization, and data processing.",
+      "Developed responsive client interfaces using React.js, improving load performance and component reusability.",
+      "Integrated MongoDB database modeling and schema validation for high-throughput business data operations.",
+      "Collaborated with senior engineers on backend optimization, security middleware, and code refactoring.",
+    ],
+    technologies: [
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "React.js",
+      "MongoDB",
+      "REST APIs",
+      "Git",
+      "MySQL",
+      "PHP",
+    ],
+  },
+  {
+    id: "previous-internship",
+    role: "MERN-Stack Developer Intern",
+    company: "ExpertX",
+    type: "Internship",
+    location: "On-site | Kerala, India",
+    period: "9 Months",
+    isCurrent: false,
+    description:
+      "Completed an extensive 9-month hands-on internship focusing on full-stack software development, database design, and end-to-end web application lifecycle.",
+    responsibilities: [
+      "Built and deployed commercial web portal modules using Node.js, Express, MySQL, and modern JavaScript.",
+      "Implemented role-based access control (RBAC) middleware for multi-tenant software systems.",
+      "Created structured database migrations, relational ER diagrams, and SQL query optimizations.",
+      "Participated in daily agile standups, code reviews, and API contract specification sessions.",
+    ],
+    technologies: [
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "MySQL",
+      "SQL",
+      "HTML5/CSS3",
+      "Postman",
+      "Git",
+    ],
+  },
+];
