@@ -84,7 +84,7 @@
   height: 100%;
   display: block;
 
-  object-fit: cover;
+  /* object-fit: cover; */
 
   transition: transform var(--transition-smooth);
 }

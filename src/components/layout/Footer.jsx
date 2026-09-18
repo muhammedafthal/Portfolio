@@ -17,8 +17,13 @@ export const Footer = ({ onOpenResume }) => {
         <div className="footer-top">
           <div className="footer-brand">
             <div className="footer-logo">
-              <span className="logo-badge">MA</span>
-              <span className="footer-brand-name">Muhammed Afthal</span>
+              <a href="/#hero" className="header-logo">
+                <img
+                  src="/assets/images/logo/portfolio-logo.png"
+                  alt="Muhammed Afthal K logo"
+                  className="logo-image"
+                />
+              </a>
             </div>
             <p className="footer-tagline">
               Software Developer focused on practical, scalable full-stack web
