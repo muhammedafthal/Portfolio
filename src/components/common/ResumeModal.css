@@ -109,8 +109,8 @@
 }
 
 .resume-tags .tag-exploring {
-  background: #FEF3C7;
-  color: #92400E;
+  background: #fef3c7;
+  color: #92400e;
   border: 1px dashed var(--color-accent-border);
 }
 
@@ -132,4 +132,82 @@
   padding: var(--space-md) var(--space-lg);
   background: var(--color-bg-secondary);
   border-top: 1px solid var(--color-border-subtle);
+}
+
+/* =========================================================
+   Resume Modal — Responsive
+========================================================= */
+
+@media (max-width: 640px) {
+  .modal-backdrop {
+    padding: var(--space-sm);
+  }
+
+  .modal-content {
+    max-height: 92vh;
+  }
+
+  .modal-header {
+    padding: var(--space-md);
+  }
+
+  .modal-title-group {
+    gap: var(--space-sm);
+  }
+
+  .modal-icon-badge {
+    width: 40px;
+    height: 40px;
+  }
+
+  .modal-header h3 {
+    font-size: 1rem;
+  }
+
+  .modal-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .modal-body {
+    padding: var(--space-md);
+  }
+
+  .resume-preview-summary {
+    gap: var(--space-md);
+  }
+
+  .resume-section h4 {
+    font-size: 0.925rem;
+  }
+
+  .resume-bullets {
+    font-size: 0.875rem;
+  }
+
+  .modal-footer {
+    padding: var(--space-sm) var(--space-md);
+    gap: var(--space-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-backdrop {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .modal-content {
+    max-width: none;
+    max-height: 94vh;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+
+  .modal-footer {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .modal-footer .btn {
+    width: 100%;
+  }
 }

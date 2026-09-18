@@ -1,26 +1,70 @@
-/* Responsive Breakpoint Utilities */
+/* =========================================================
+   Responsive Breakpoint Utilities
+   Global Responsive Design Tokens
+========================================================= */
+
+/* =========================================================
+   Large Tablet / Small Laptop
+========================================================= */
 
 @media (max-width: 1024px) {
   :root {
     --space-3xl: 3.5rem;
     --space-4xl: 4.5rem;
+
+    --container-max-width: 100%;
   }
 }
 
+/* =========================================================
+   Tablet
+========================================================= */
+
 @media (max-width: 768px) {
   :root {
+    --space-2xl: 2.5rem;
     --space-3xl: 2.75rem;
     --space-4xl: 3.5rem;
+
+    --radius-lg: 16px;
+    --radius-xl: 20px;
   }
 
   .section-padding {
     padding-top: var(--space-2xl);
     padding-bottom: var(--space-2xl);
   }
+}
 
-  .container,
-  .container-narrow {
-    padding-left: var(--space-md);
-    padding-right: var(--space-md);
+/* =========================================================
+   Mobile
+========================================================= */
+
+@media (max-width: 480px) {
+  :root {
+    --space-lg: 1.25rem;
+    --space-xl: 1.5rem;
+    --space-2xl: 2rem;
+    --space-3xl: 2.5rem;
+    --space-4xl: 3rem;
+
+    --radius-lg: 14px;
+    --radius-xl: 18px;
+  }
+
+  .section-padding {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+  }
+}
+
+/* =========================================================
+   Very Small Devices
+========================================================= */
+
+@media (max-width: 360px) {
+  :root {
+    --space-md: 0.875rem;
+    --space-lg: 1rem;
   }
 }

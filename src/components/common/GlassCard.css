@@ -14,7 +14,9 @@
   background: var(--glass-bg-hover);
   border-color: var(--color-border-strong);
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md), 0 0 20px rgba(24, 24, 27, 0.06);
+  box-shadow:
+    var(--shadow-md),
+    0 0 20px rgba(24, 24, 27, 0.06);
 }
 
 .glass-card-padding-compact {
@@ -27,4 +29,32 @@
 
 .glass-card-padding-relaxed {
   padding: var(--space-2xl);
+}
+
+/* =========================================================
+   Glass Card — Responsive
+========================================================= */
+
+@media (max-width: 640px) {
+  .glass-card-padding-relaxed {
+    padding: var(--space-lg);
+  }
+
+  .glass-card-padding-normal {
+    padding: var(--space-lg);
+  }
+
+  .glass-card-padding-compact {
+    padding: var(--space-sm);
+  }
+}
+
+@media (max-width: 400px) {
+  .glass-card-padding-relaxed {
+    padding: var(--space-md);
+  }
+
+  .glass-card-padding-normal {
+    padding: var(--space-md);
+  }
 }

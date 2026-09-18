@@ -1,4 +1,6 @@
-/* Global Reset & Base Layout Styles */
+/* =========================================================
+   Global Reset & Base Layout
+========================================================= */
 
 *,
 *::before,
@@ -8,27 +10,56 @@
   padding: 0;
 }
 
+/* =========================================================
+   HTML
+========================================================= */
+
 html {
+  min-width: 320px;
+
   font-family: var(--font-family);
   font-size: 16px;
   line-height: 1.6;
+
   color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
+
   scroll-behavior: smooth;
+
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* =========================================================
+   Body
+========================================================= */
+
 body {
+  min-width: 320px;
   min-height: 100vh;
+
   overflow-x: hidden;
+
   position: relative;
+
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
 }
 
-/* Links */
+/* =========================================================
+   Root
+========================================================= */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* =========================================================
+   Links
+========================================================= */
+
 a {
   color: inherit;
   text-decoration: none;
@@ -45,56 +76,125 @@ select:focus-visible {
   border-radius: var(--radius-xs);
 }
 
-/* Image Defaults */
+/* =========================================================
+   Images / Media
+========================================================= */
+
 img,
 svg,
 video {
   display: block;
   max-width: 100%;
+}
+
+img {
   height: auto;
 }
 
-/* Lists */
+video {
+  height: auto;
+}
+
+/* Prevent accidental overflow from long content */
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+/* =========================================================
+   Lists
+========================================================= */
+
 ul,
 ol {
   list-style: none;
 }
 
-/* Buttons Reset */
+/* =========================================================
+   Buttons
+========================================================= */
+
 button {
   font-family: inherit;
   font-size: inherit;
+
+  color: inherit;
+
   background: none;
   border: none;
+
   cursor: pointer;
-  color: inherit;
 }
 
-/* Layout Utilities */
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   Form Elements
+========================================================= */
+
+input,
+textarea,
+select {
+  max-width: 100%;
+  font: inherit;
+}
+
+/* =========================================================
+   Layout Container
+========================================================= */
+
 .container {
   width: 100%;
-  /* max-width: var(--container-max-width); */
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--space-lg);
-  padding-right: var(--space-lg);
+  max-width: var(--container-max-width);
+
+  margin-inline: auto;
+
+  padding-inline: var(--space-lg);
 }
+
+/* =========================================================
+   Narrow Container
+========================================================= */
 
 .container-narrow {
   width: 100%;
   max-width: var(--container-narrow-width);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--space-lg);
-  padding-right: var(--space-lg);
+
+  margin-inline: auto;
+
+  padding-inline: var(--space-lg);
 }
+
+/* =========================================================
+   Section Padding
+========================================================= */
 
 .section-padding {
-  padding-top: var(--space-3xl);
-  padding-bottom: var(--space-3xl);
+  padding-block: var(--space-3xl);
 }
 
-/* Custom Scrollbar */
+/* =========================================================
+   Text Wrapping
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  overflow-wrap: break-word;
+}
+
+/* =========================================================
+   Custom Scrollbar
+========================================================= */
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -110,4 +210,45 @@ button {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-accent);
+}
+
+/* =========================================================
+   Tablet
+========================================================= */
+
+@media (max-width: 1024px) {
+  .container,
+  .container-narrow {
+    padding-inline: var(--space-lg);
+  }
+}
+
+/* =========================================================
+   Mobile
+========================================================= */
+
+@media (max-width: 768px) {
+  .container,
+  .container-narrow {
+    padding-inline: var(--space-md);
+  }
+
+  .section-padding {
+    padding-block: var(--space-2xl);
+  }
+}
+
+/* =========================================================
+   Small Mobile
+========================================================= */
+
+@media (max-width: 480px) {
+  .container,
+  .container-narrow {
+    padding-inline: var(--space-sm);
+  }
+
+  .section-padding {
+    padding-block: var(--space-xl);
+  }
 }

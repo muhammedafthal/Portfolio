@@ -155,6 +155,10 @@
   color: var(--color-text-secondary);
 }
 
+/* =========================================================
+   Skills Section — Responsive
+========================================================= */
+
 @media (max-width: 860px) {
   .skills-grid {
     grid-template-columns: 1fr;
@@ -164,5 +168,77 @@
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-xs);
+  }
+}
+
+@media (max-width: 640px) {
+  .skills-grid {
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+  }
+
+  .skill-category-title {
+    font-size: 1.15rem;
+  }
+
+  .skill-category-desc {
+    font-size: 0.85rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .skill-item-list {
+    gap: 0.4rem;
+  }
+
+  .skill-pill {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.65rem;
+  }
+
+  .skill-level-badge {
+    font-size: 0.65rem;
+  }
+
+  .exploring-wrapper {
+    margin-top: var(--space-lg);
+  }
+
+  .exploring-card {
+    padding: var(--space-lg);
+  }
+
+  .exploring-badge {
+    font-size: 0.75rem;
+  }
+
+  .exploring-subtext {
+    font-size: 0.8rem;
+  }
+
+  .exploring-item {
+    gap: var(--space-sm);
+  }
+
+  .exploring-icon-box {
+    width: 42px;
+    height: 42px;
+  }
+
+  .exploring-title-row {
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  .exploring-title-row h4 {
+    font-size: 1rem;
+  }
+
+  .exploring-status-tag {
+    font-size: 0.7rem;
+  }
+
+  .exploring-item p {
+    font-size: 0.875rem;
+    line-height: 1.55;
   }
 }

@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --text: #6b6375;
   --text-h: #08060d;
   --bg: #fff;
@@ -108,4 +108,66 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+} */
+
+/* =========================================================
+   Global Application Entry Styles
+========================================================= */
+
+:root {
+  font-family: var(--font-family);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================================================
+   Root Application Container
+========================================================= */
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   Base Typography
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family);
+}
+
+p {
+  margin: 0;
+}
+
+/* =========================================================
+   Responsive Typography Defaults
+========================================================= */
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    font-size: 14px;
+  }
 }

@@ -1,46 +1,82 @@
+/* =========================================================
+   Case Study Sections
+========================================================= */
+
 .case-study-container {
+  width: 100%;
+
   padding-top: var(--space-2xl);
   padding-bottom: var(--space-4xl);
 }
 
 .case-study-block {
+  width: 100%;
   margin-bottom: var(--space-2xl);
 }
+
+/* =========================================================
+   Block Titles
+========================================================= */
 
 .block-title-row {
   display: flex;
   align-items: center;
+
   gap: var(--space-xs);
+
   margin-bottom: var(--space-md);
 }
 
 .block-title-row h2 {
   font-size: 1.5rem;
+  line-height: 1.3;
 }
 
 .block-title-row h3 {
   font-size: 1.25rem;
+  line-height: 1.3;
 }
 
+/* =========================================================
+   Lead
+========================================================= */
+
 .case-study-lead {
+  margin-bottom: var(--space-md);
+
+  color: var(--color-text-secondary);
+
   font-size: 1.15rem;
   line-height: 1.7;
-  color: var(--color-text-secondary);
-  margin-bottom: var(--space-md);
 }
+
+/* =========================================================
+   Objective
+========================================================= */
 
 .objective-box {
   padding: var(--space-md);
-  border-radius: var(--radius-md);
-  background: var(--color-accent-subtle);
+
   border: 1px solid var(--color-accent-border);
-  font-size: 0.975rem;
+  border-radius: var(--radius-md);
+
+  background: var(--color-accent-subtle);
+
   color: var(--color-accent-dark);
+
+  font-size: 0.975rem;
+  line-height: 1.6;
 }
+
+/* =========================================================
+   Problem / Solution
+========================================================= */
 
 .problem-solution-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
   gap: var(--space-xl);
 }
 
@@ -53,52 +89,78 @@
 }
 
 .problem-solution-grid p {
-  font-size: 0.975rem;
   color: var(--color-text-secondary);
+
+  font-size: 0.975rem;
   line-height: 1.65;
 }
 
+/* =========================================================
+   User Roles
+========================================================= */
+
 .user-roles-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
   gap: var(--space-md);
 }
 
 .role-card {
   padding: var(--space-md);
-  border-radius: var(--radius-md);
-  background: var(--color-surface);
+
   border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
 }
 
 .role-name {
   display: inline-block;
+
+  margin-bottom: 0.25rem;
+
+  color: var(--color-accent-dark);
+
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--color-accent-dark);
-  margin-bottom: 0.25rem;
 }
 
 .role-access {
-  font-size: 0.9rem;
   color: var(--color-text-secondary);
+
+  font-size: 0.9rem;
   line-height: 1.5;
 }
 
+/* =========================================================
+   Feature Checklist
+========================================================= */
+
 .features-checklist {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
   gap: var(--space-sm);
 }
 
 .features-checklist li {
   display: flex;
   align-items: flex-start;
+
   gap: var(--space-xs);
-  font-size: 0.95rem;
+
   color: var(--color-text-secondary);
+
+  font-size: 0.95rem;
   line-height: 1.55;
 }
+
+/* =========================================================
+   Architecture Details
+========================================================= */
 
 .arch-details-card {
   margin-top: var(--space-md);
@@ -106,84 +168,124 @@
 
 .arch-layers-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
   gap: var(--space-lg);
 }
 
 .arch-layer-item h4 {
-  font-size: 0.95rem;
-  color: var(--color-accent-dark);
   margin-bottom: 0.25rem;
+
+  color: var(--color-accent-dark);
+
+  font-size: 0.95rem;
 }
 
 .arch-layer-item p {
-  font-size: 0.9rem;
   color: var(--color-text-secondary);
+
+  font-size: 0.9rem;
   line-height: 1.55;
 }
+
+/* =========================================================
+   Technical Decisions
+========================================================= */
 
 .tech-decisions-list {
   display: flex;
   flex-direction: column;
+
   gap: var(--space-md);
 }
 
 .decision-item {
   padding: var(--space-md);
-  border-radius: var(--radius-md);
-  background: var(--color-surface);
+
   border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
 }
 
 .decision-item h4 {
-  font-size: 1.05rem;
   margin-bottom: 0.25rem;
+
+  font-size: 1.05rem;
 }
 
 .decision-item p {
-  font-size: 0.925rem;
   color: var(--color-text-secondary);
+
+  font-size: 0.925rem;
+  line-height: 1.55;
 }
+
+/* =========================================================
+   Challenges
+========================================================= */
 
 .challenges-list {
   display: flex;
   flex-direction: column;
+
   gap: var(--space-lg);
 }
 
 .challenge-item {
   padding: var(--space-md);
-  border-radius: var(--radius-md);
-  background: var(--color-surface);
+
   border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
 }
 
 .challenge-item h4 {
-  font-size: 1.05rem;
-  color: var(--color-text-primary);
   margin-bottom: 0.35rem;
+
+  color: var(--color-text-primary);
+
+  font-size: 1.05rem;
 }
 
 .challenge-desc {
-  font-size: 0.925rem;
-  color: var(--color-text-muted);
   margin-bottom: var(--space-xs);
+
+  color: var(--color-text-muted);
+
+  font-size: 0.925rem;
+  line-height: 1.55;
 }
 
 .challenge-solution {
   display: flex;
   align-items: flex-start;
+
   gap: var(--space-xs);
-  font-size: 0.925rem;
-  color: var(--color-text-primary);
-  background: var(--color-accent-subtle);
+
   padding: 0.5rem var(--space-md);
+
   border-radius: var(--radius-sm);
+
+  background: var(--color-accent-subtle);
+
+  color: var(--color-text-primary);
+
+  font-size: 0.925rem;
+  line-height: 1.5;
 }
+
+/* =========================================================
+   Lessons / Roadmap
+========================================================= */
 
 .lessons-roadmap-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
   gap: var(--space-xl);
 }
 
@@ -191,6 +293,7 @@
 .roadmap-list {
   display: flex;
   flex-direction: column;
+
   gap: var(--space-xs);
 }
 
@@ -198,11 +301,18 @@
 .roadmap-list li {
   display: flex;
   align-items: flex-start;
+
   gap: var(--space-xs);
-  font-size: 0.925rem;
+
   color: var(--color-text-secondary);
+
+  font-size: 0.925rem;
   line-height: 1.55;
 }
+
+/* =========================================================
+   Tablet
+========================================================= */
 
 @media (max-width: 860px) {
   .problem-solution-grid,
@@ -211,5 +321,61 @@
   .arch-layers-grid,
   .lessons-roadmap-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   Mobile
+========================================================= */
+
+@media (max-width: 480px) {
+  .case-study-container {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-3xl);
+  }
+
+  .case-study-block {
+    margin-bottom: var(--space-xl);
+  }
+
+  .block-title-row {
+    margin-bottom: var(--space-sm);
+  }
+
+  .block-title-row h2 {
+    font-size: 1.3rem;
+  }
+
+  .block-title-row h3 {
+    font-size: 1.1rem;
+  }
+
+  .case-study-lead {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .objective-box {
+    font-size: 0.9rem;
+  }
+
+  .problem-solution-grid,
+  .user-roles-grid,
+  .features-checklist,
+  .arch-layers-grid,
+  .lessons-roadmap-grid {
+    gap: var(--space-md);
+  }
+
+  .problem-solution-grid p,
+  .role-access,
+  .features-checklist li,
+  .arch-layer-item p,
+  .decision-item p,
+  .challenge-desc,
+  .challenge-solution,
+  .lessons-list li,
+  .roadmap-list li {
+    font-size: 0.88rem;
   }
 }

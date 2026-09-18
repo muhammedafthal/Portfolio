@@ -27,3 +27,40 @@
   font-size: 1.1rem;
   color: var(--color-text-secondary);
 }
+
+/* =========================================================
+   Section Heading — Responsive
+========================================================= */
+
+@media (max-width: 640px) {
+  .section-heading {
+    margin-bottom: var(--space-xl);
+  }
+
+  .section-heading-title {
+    font-size: clamp(1.75rem, 8vw, 2.3rem);
+  }
+
+  .section-heading-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .section-heading-center {
+    max-width: 100%;
+  }
+
+  .section-heading-left {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .section-heading-title {
+    font-size: 1.7rem;
+  }
+
+  .section-heading-subtitle {
+    font-size: 0.9rem;
+  }
+}

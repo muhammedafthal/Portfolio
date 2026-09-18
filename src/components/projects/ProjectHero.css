@@ -1,24 +1,44 @@
+/* =========================================================
+   Project Hero Section
+========================================================= */
+
 .project-hero-section {
   padding-top: calc(var(--space-4xl) + 1.5rem);
   padding-bottom: var(--space-2xl);
+
   background: var(--gradient-hero-bg);
+
   border-bottom: 1px solid var(--color-border);
 }
+
+/* =========================================================
+   Breadcrumbs
+========================================================= */
 
 .project-breadcrumbs {
   display: flex;
   align-items: center;
+
   gap: var(--space-xs);
+
   margin-bottom: var(--space-lg);
+
   font-size: 0.9rem;
+
+  flex-wrap: wrap;
 }
 
 .breadcrumb-link {
   display: inline-flex;
   align-items: center;
+
   gap: 0.35rem;
+
   color: var(--color-text-muted);
+
   font-weight: 500;
+
+  transition: color var(--transition-fast);
 }
 
 .breadcrumb-link:hover {
@@ -31,13 +51,22 @@
 
 .breadcrumb-current {
   color: var(--color-text-primary);
+
   font-weight: 600;
+
+  overflow-wrap: anywhere;
 }
+
+/* =========================================================
+   Hero Content
+========================================================= */
 
 .project-hero-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  width: 100%;
   max-width: 840px;
 }
 
@@ -47,36 +76,129 @@
 
 .project-hero-title {
   margin-bottom: var(--space-xs);
+
+  max-width: 100%;
 }
 
 .project-hero-tagline {
-  font-size: 1.25rem;
-  color: var(--color-text-secondary);
-  line-height: 1.6;
   margin-bottom: var(--space-xl);
+
+  color: var(--color-text-secondary);
+
+  font-size: 1.25rem;
+  line-height: 1.6;
+
+  max-width: 760px;
 }
+
+/* =========================================================
+   Technology Badges
+========================================================= */
 
 .project-hero-tech-badges {
   display: flex;
   flex-wrap: wrap;
+
   gap: var(--space-xs);
+
   margin-bottom: var(--space-2xl);
 }
 
 .hero-tech-badge {
-  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+
   padding: 0.3rem 0.75rem;
-  border-radius: var(--radius-sm);
-  background: var(--color-surface);
+
   border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+
+  background: var(--color-surface);
+
   color: var(--color-text-secondary);
+
+  font-size: 0.85rem;
   font-weight: 500;
+
   box-shadow: var(--shadow-sm);
+
+  white-space: nowrap;
 }
+
+/* =========================================================
+   CTAs
+========================================================= */
 
 .project-hero-ctas {
   display: flex;
   align-items: center;
+
   gap: var(--space-md);
+
   flex-wrap: wrap;
+}
+
+/* =========================================================
+   Tablet
+========================================================= */
+
+@media (max-width: 768px) {
+  .project-hero-section {
+    padding-top: calc(var(--space-3xl) + 2rem);
+    padding-bottom: var(--space-xl);
+  }
+
+  .project-breadcrumbs {
+    margin-bottom: var(--space-md);
+  }
+
+  .project-hero-tagline {
+    font-size: 1.1rem;
+  }
+
+  .project-hero-tech-badges {
+    margin-bottom: var(--space-xl);
+  }
+}
+
+/* =========================================================
+   Mobile
+========================================================= */
+
+@media (max-width: 480px) {
+  .project-hero-section {
+    padding-top: calc(var(--space-3xl) + 1.5rem);
+    padding-bottom: var(--space-lg);
+  }
+
+  .project-breadcrumbs {
+    font-size: 0.8rem;
+  }
+
+  .project-hero-tagline {
+    margin-bottom: var(--space-lg);
+
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .project-hero-tech-badges {
+    gap: 0.35rem;
+    margin-bottom: var(--space-lg);
+  }
+
+  .hero-tech-badge {
+    padding: 0.28rem 0.6rem;
+    font-size: 0.72rem;
+  }
+
+  .project-hero-ctas {
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .project-hero-ctas > * {
+    width: 100%;
+  }
 }

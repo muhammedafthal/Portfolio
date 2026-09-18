@@ -29,9 +29,9 @@
 
 /* Primary Onyx Black Variant */
 .btn-primary {
-  background: #18181B;
-  color: #FFFFFF;
-  border: 1px solid #18181B;
+  background: #18181b;
+  color: #ffffff;
+  border: 1px solid #18181b;
   box-shadow: 0 4px 14px rgba(24, 24, 27, 0.15);
 }
 
@@ -94,4 +94,32 @@
 
 .btn-icon {
   flex-shrink: 0;
+}
+
+/* =========================================================
+   Buttons — Responsive
+========================================================= */
+
+@media (max-width: 640px) {
+  .btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.975rem;
+  }
+
+  .btn-md {
+    padding: 0.6rem 1.15rem;
+    font-size: 0.925rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn-lg {
+    padding: 0.7rem 1.25rem;
+    font-size: 0.925rem;
+  }
+
+  .btn-md {
+    padding: 0.55rem 1rem;
+    font-size: 0.875rem;
+  }
 }

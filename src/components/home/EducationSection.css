@@ -85,8 +85,44 @@
   line-height: 1.6;
 }
 
+/* =========================================================
+   Education Section — Responsive
+========================================================= */
+
 @media (max-width: 640px) {
+  .education-header {
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .education-icon-box {
+    width: 44px;
+    height: 44px;
+  }
+
+  .education-degree {
+    font-size: 1.15rem;
+  }
+
+  .education-institution {
+    font-size: 0.875rem;
+  }
+
   .education-status-badge {
     margin-left: 0;
+    font-size: 0.7rem;
+  }
+
+  .education-desc {
+    font-size: 0.925rem;
+    line-height: 1.6;
+  }
+
+  .education-highlights h4 {
+    font-size: 0.925rem;
+  }
+
+  .education-highlights li {
+    font-size: 0.875rem;
   }
 }

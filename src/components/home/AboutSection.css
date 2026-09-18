@@ -60,8 +60,44 @@
   line-height: 1.55;
 }
 
+/* =========================================================
+   About Section — Responsive
+========================================================= */
+
 @media (max-width: 900px) {
   .about-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-card-title {
+    font-size: 1.2rem;
+  }
+
+  .about-main-story p {
+    font-size: 0.925rem;
+    line-height: 1.65;
+  }
+
+  .about-side-cards {
+    gap: var(--space-sm);
+  }
+
+  .about-mini-card {
+    gap: var(--space-sm);
+  }
+
+  .about-icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-mini-card h4 {
+    font-size: 1rem;
+  }
+
+  .about-mini-card p {
+    font-size: 0.875rem;
   }
 }

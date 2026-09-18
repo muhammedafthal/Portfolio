@@ -1,44 +1,128 @@
+/* =========================================================
+   Not Found Page
+========================================================= */
+
 .not-found-page {
-  min-height: 100vh;
+  min-height: 100svh;
+
   display: flex;
   flex-direction: column;
 }
+
+/* =========================================================
+   Container
+========================================================= */
 
 .not-found-container {
-  flex-grow: 1;
+  flex: 1;
+
   display: flex;
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding-top: var(--space-4xl);
+
+  width: 100%;
+
+  padding: var(--space-4xl) var(--space-lg);
 }
 
+/* =========================================================
+   Badge
+========================================================= */
+
 .not-found-badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   padding: 0.4rem 1.2rem;
+
+  border: 1px solid var(--color-accent-border);
   border-radius: var(--radius-full);
+
   background: var(--color-accent-subtle);
   color: var(--color-accent-dark);
-  font-weight: 800;
+
   font-size: 1.1rem;
+  font-weight: 800;
+
   margin-bottom: var(--space-md);
-  border: 1px solid var(--color-accent-border);
 }
+
+/* =========================================================
+   Heading
+========================================================= */
 
 .not-found-container h1 {
   margin-bottom: var(--space-xs);
+
+  text-align: center;
 }
 
+/* =========================================================
+   Description
+========================================================= */
+
 .not-found-desc {
+  width: 100%;
   max-width: 480px;
+
   margin-bottom: var(--space-2xl);
+
+  text-align: center;
 }
+
+/* =========================================================
+   Buttons
+========================================================= */
 
 .not-found-buttons {
   display: flex;
+
   align-items: center;
-  gap: var(--space-md);
-  flex-wrap: wrap;
   justify-content: center;
+
+  gap: var(--space-md);
+
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   Tablet
+========================================================= */
+
+@media (max-width: 768px) {
+  .not-found-container {
+    padding: var(--space-3xl) var(--space-lg);
+  }
+
+  .not-found-desc {
+    margin-bottom: var(--space-xl);
+  }
+}
+
+/* =========================================================
+   Mobile
+========================================================= */
+
+@media (max-width: 480px) {
+  .not-found-container {
+    padding: var(--space-2xl) var(--space-md);
+  }
+
+  .not-found-badge {
+    font-size: 0.95rem;
+    padding: 0.35rem 1rem;
+  }
+
+  .not-found-buttons {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .not-found-buttons > * {
+    width: 100%;
+    max-width: 280px;
+  }
 }

@@ -3,18 +3,28 @@
 ========================================================= */
 
 .projects-page {
-  min-height: 100vh;
-  background: var(--color-bg-primary);
-  /* padding: 2rem; */
+  min-height: 100svh;
+
   padding-top: 1rem;
+
+  background: var(--color-bg-primary);
 }
+
+/* =========================================================
+   Breadcrumb
+========================================================= */
 
 .breadcrumb-link {
   display: inline-flex;
   align-items: center;
+
   gap: 0.35rem;
+
   color: var(--color-text-muted);
+
   font-weight: 500;
+
+  transition: color var(--transition-fast);
 }
 
 .breadcrumb-link:hover {
@@ -22,36 +32,37 @@
 }
 
 /* =========================================================
-   Page Header
-========================================================= */
-
-/* .projects-page-header {
-  padding-top: 10rem;
-  padding-bottom: 4rem;
-} */
-
-/* =========================================================
-   Frontend Projects Grid
+   Projects List
 ========================================================= */
 
 .frontend-projects-list {
   padding-bottom: 7rem;
 }
 
+/* =========================================================
+   Projects Grid
+========================================================= */
+
 .frontend-projects-grid {
   display: grid;
+
   grid-template-columns: repeat(2, minmax(0, 1fr));
+
   gap: var(--space-xl);
 }
 
 /* =========================================================
-   Compact Project Card
+   Project Card
 ========================================================= */
 
 .frontend-project-card {
+  min-width: 0;
+
   overflow: hidden;
+
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
+
   background: var(--color-bg-secondary);
 
   transition:
@@ -62,29 +73,31 @@
 
 .frontend-project-card:hover {
   transform: translateY(-3px);
+
   box-shadow: 0 14px 35px rgba(24, 24, 27, 0.07);
 }
 
 /* =========================================================
-   Compact Project Image
+   Project Image
 ========================================================= */
 
 .frontend-project-image {
   width: 100%;
 
-  /* Much shorter than the previous 16 / 9 area */
   aspect-ratio: 16 / 7;
 
   overflow: hidden;
+
   background: var(--color-bg-tertiary);
 }
 
 .frontend-project-image img {
   width: 100%;
   height: 100%;
+
   display: block;
 
-  /* object-fit: cover; */
+  object-fit: cover;
 
   transition: transform var(--transition-smooth);
 }
@@ -101,34 +114,44 @@
   padding: 1.35rem 1.5rem 1.4rem;
 }
 
-/* Category */
+/* =========================================================
+   Category
+========================================================= */
 
 .frontend-project-category {
   display: block;
 
   margin-bottom: 0.5rem;
 
+  color: var(--color-text-muted);
+
   font-size: 0.68rem;
   font-weight: 600;
+
   letter-spacing: 0.1em;
   text-transform: uppercase;
-
-  color: var(--color-text-muted);
 }
 
-/* Title */
+/* =========================================================
+   Title
+========================================================= */
 
 .frontend-project-content h2 {
   margin-bottom: 0.5rem;
 
+  color: var(--color-text-primary);
+
   font-size: 1.4rem;
   font-weight: 500;
-  letter-spacing: -0.025em;
 
-  color: var(--color-text-primary);
+  line-height: 1.25;
+
+  letter-spacing: -0.025em;
 }
 
-/* Description */
+/* =========================================================
+   Description
+========================================================= */
 
 .frontend-project-content p {
   margin-bottom: 1rem;
@@ -153,15 +176,20 @@
 }
 
 .frontend-project-tech span {
+  display: inline-flex;
+  align-items: center;
+
   padding: 0.28rem 0.55rem;
 
   border: 1px solid var(--color-border);
   border-radius: var(--radius-full);
 
+  color: var(--color-text-secondary);
+
   font-size: 0.68rem;
   line-height: 1;
 
-  color: var(--color-text-secondary);
+  white-space: nowrap;
 }
 
 /* =========================================================
@@ -173,17 +201,20 @@
   align-items: center;
 
   gap: 1.15rem;
+
+  flex-wrap: wrap;
 }
 
 .frontend-project-link {
   display: inline-flex;
   align-items: center;
+
   gap: 0.35rem;
+
+  color: var(--color-text-primary);
 
   font-size: 0.82rem;
   font-weight: 600;
-
-  color: var(--color-text-primary);
 
   text-decoration: none;
 
@@ -199,22 +230,22 @@
 }
 
 /* =========================================================
-   Responsive
+   Tablet / Smaller Desktop
 ========================================================= */
 
 @media (max-width: 900px) {
   .frontend-projects-grid {
     grid-template-columns: 1fr;
+
     gap: var(--space-xl);
   }
 }
 
-@media (max-width: 768px) {
-  .projects-page-header {
-    padding-top: 8rem;
-    padding-bottom: 3rem;
-  }
+/* =========================================================
+   Tablet
+========================================================= */
 
+@media (max-width: 768px) {
   .frontend-projects-list {
     padding-bottom: 5rem;
   }
@@ -225,5 +256,62 @@
 
   .frontend-project-image {
     aspect-ratio: 16 / 8;
+  }
+}
+
+/* =========================================================
+   Mobile
+========================================================= */
+
+@media (max-width: 480px) {
+  .projects-page {
+    padding-top: 0.75rem;
+  }
+
+  .frontend-projects-list {
+    padding-bottom: 4rem;
+  }
+
+  .frontend-projects-grid {
+    gap: var(--space-lg);
+  }
+
+  .frontend-project-card:hover {
+    transform: none;
+  }
+
+  .frontend-project-content {
+    padding: 1rem;
+  }
+
+  .frontend-project-category {
+    font-size: 0.64rem;
+  }
+
+  .frontend-project-content h2 {
+    font-size: 1.25rem;
+  }
+
+  .frontend-project-content p {
+    font-size: 0.88rem;
+  }
+
+  .frontend-project-tech {
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+  }
+
+  .frontend-project-tech span {
+    font-size: 0.64rem;
+  }
+
+  .frontend-project-actions {
+    gap: 0.9rem;
+  }
+
+  .frontend-project-link {
+    min-height: 40px;
+
+    font-size: 0.8rem;
   }
 }

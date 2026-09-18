@@ -92,7 +92,7 @@
 }
 
 /* =========================================================
-   Responsive
+   Featured Projects — Responsive
 ========================================================= */
 
 @media (max-width: 900px) {
@@ -104,14 +104,38 @@
   .frontend-projects-cta {
     align-items: flex-start;
     flex-direction: column;
-
     margin-top: 4rem;
     padding: 1.75rem;
   }
 }
 
+@media (max-width: 640px) {
+  .frontend-projects-cta {
+    margin-top: var(--space-2xl);
+    padding: var(--space-lg);
+    gap: var(--space-md);
+  }
+
+  .frontend-projects-content {
+    max-width: 100%;
+  }
+
+  .frontend-projects-tag {
+    font-size: 0.68rem;
+  }
+
+  .frontend-projects-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .frontend-projects-content p {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+}
+
 @media (max-width: 480px) {
   .frontend-projects-cta {
-    padding: 1.5rem;
+    padding: var(--space-md);
   }
 }

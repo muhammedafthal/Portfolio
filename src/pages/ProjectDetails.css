@@ -1,19 +1,39 @@
+/* =========================================================
+   Project Details Page
+========================================================= */
+
 .project-details-page {
-  min-height: 100vh;
+  min-height: 100svh;
 }
 
+/* =========================================================
+   Project Not Found Page
+========================================================= */
+
 .project-not-found-page {
-  min-height: 100vh;
+  min-height: 100svh;
+
   display: flex;
   flex-direction: column;
 }
 
+/* =========================================================
+   Not Found Card
+========================================================= */
+
 .not-found-card {
-  max-width: 500px;
+  width: min(100% - 2 * var(--space-lg), 500px);
+
   margin: var(--space-4xl) auto;
-  text-align: center;
+
   padding: var(--space-2xl);
+
+  text-align: center;
 }
+
+/* =========================================================
+   Card Typography
+========================================================= */
 
 .not-found-card h2 {
   margin-bottom: var(--space-sm);
@@ -21,12 +41,58 @@
 
 .not-found-card p {
   margin-bottom: var(--space-xl);
+
   color: var(--color-text-secondary);
 }
 
+/* =========================================================
+   Actions
+========================================================= */
+
 .not-found-actions {
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   gap: var(--space-md);
+
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   Tablet
+========================================================= */
+
+@media (max-width: 768px) {
+  .not-found-card {
+    width: min(100% - 2 * var(--space-md), 500px);
+
+    margin: var(--space-3xl) auto;
+
+    padding: var(--space-xl);
+  }
+}
+
+/* =========================================================
+   Mobile
+========================================================= */
+
+@media (max-width: 480px) {
+  .not-found-card {
+    width: calc(100% - 2rem);
+
+    margin: var(--space-2xl) auto;
+
+    padding: var(--space-lg);
+  }
+
+  .not-found-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .not-found-actions > * {
+    width: 100%;
+  }
 }

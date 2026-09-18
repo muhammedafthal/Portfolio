@@ -1,44 +1,70 @@
-/* Animations, Hover Transitions & Reduced-Motion Handlers */
+/* =========================================================
+   Animations, Hover Transitions & Reduced Motion
+========================================================= */
+
+/* =========================================================
+   Fade In
+========================================================= */
 
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
+/* =========================================================
+   Slide Up
+========================================================= */
 
 @keyframes slideUp {
   from {
     opacity: 0;
     transform: translateY(24px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+/* =========================================================
+   Pulse Glow
+========================================================= */
+
 @keyframes pulseGlow {
   0%,
   100% {
     box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.4);
   }
+
   50% {
     box-shadow: 0 0 0 12px rgba(217, 119, 6, 0);
   }
 }
+
+/* =========================================================
+   Soft Floating Motion
+========================================================= */
 
 @keyframes floatSoft {
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-6px);
   }
 }
+
+/* =========================================================
+   Animation Utilities
+========================================================= */
 
 .animate-fade-in {
   animation: fadeIn var(--transition-smooth) forwards;
@@ -48,11 +74,18 @@
   animation: slideUp var(--transition-smooth) forwards;
 }
 
-/* Accessibility: Respect prefers-reduced-motion */
+/* =========================================================
+   Accessibility — Reduced Motion
+========================================================= */
+
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   *,
-  ::before,
-  ::after {
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
