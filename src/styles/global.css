@@ -149,9 +149,9 @@ select {
 
 .container {
   width: 100%;
-  max-width: var(--container-max-width);
+  /* max-width: var(--container-max-width); */
 
-  margin-inline: auto;
+  /* margin-inline: auto; */
 
   padding-inline: var(--space-lg);
 }
