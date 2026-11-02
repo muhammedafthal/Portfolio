@@ -18,8 +18,8 @@ export const projects = [
       "REST API",
     ],
     image: "/assets/images/projects/MediCare-cover-img.png",
-    github: "https://github.com/muhammedafthal/hospital-management-system",
-    liveDemo: "https://hms-demo.afthal.dev",
+    github: "https://github.com/muhammedafthal/HsptlManagementSys.git",
+    liveDemo: "http://hsptlmanagementsys-1.onrender.com/",
 
     caseStudy: {
       tagline:
@@ -233,7 +233,7 @@ exports.createAppointment = async (req, res) => {
       "CSS Modules",
     ],
     image: "/assets/images/projects/Tomato-cover-img.png",
-    github: "https://github.com/muhammedafthal/food-delivery-app",
+    github: "https://github.com/muhammedafthal/fullstack-app.git",
     liveDemo: "https://food-del-frontend-t3g1.onrender.com/",
 
     caseStudy: {

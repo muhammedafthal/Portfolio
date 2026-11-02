@@ -96,11 +96,11 @@ export const skillCategories = [
 
 export const currentlyExploring = [
   {
-    name: "Python",
+    name: "Docker",
     status: "Actively Learning & Exploring",
     description:
-      "Diving into Python scripting, data structures, and backend frameworks (FastAPI fundamentals).",
-    icon: "Terminal",
+      "Learning containerization basics, building Dockerfiles, and containerising MERN and FastAPI applications for reliable deployment.",
+    icon: "Docker", // or "Terminal" / "Layers"
     progress: "Exploring",
   },
 ];
