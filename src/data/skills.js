@@ -18,6 +18,12 @@ export const skillCategories = [
       },
       { name: "Node.js", level: "Advanced", icon: "Server", highlight: true },
       {
+        name: "Python",
+        level: "Advanced",
+        icon: "FileCode2",
+        highlight: true,
+      },
+      {
         name: "PHP",
         level: "Intermediate",
         icon: "FileCode2",
@@ -31,6 +37,12 @@ export const skillCategories = [
       "Server-side web frameworks, REST API design, authentication, and backend middleware logic.",
     skills: [
       { name: "Express.js", level: "Advanced", icon: "Cpu", highlight: true },
+      {
+        name: "FastAPI",
+        level: "Advanced",
+        icon: "SiFastapi",
+        highlight: true,
+      },
       {
         name: "RESTful APIs",
         level: "Advanced",

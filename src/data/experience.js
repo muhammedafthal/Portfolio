@@ -5,8 +5,8 @@ export const experiences = [
     company: "BrandFolks",
     type: "Internship",
     location: "On-site | Kerala, India",
-    period: "Present",
-    isCurrent: true,
+    period: "5 Months",
+    isCurrent: false,
     description:
       "Developing scalable full-stack web applications, implementing secure RESTful APIs in Node.js/Express, and building responsive React components.",
     responsibilities: [
